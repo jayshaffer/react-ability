@@ -1,0 +1,23 @@
+{
+  "name": "react-ability",
+  "version": "1.0.0",
+  "description": "React access control through roles and permissions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "permissions",
+    "ability",
+    "authorization",
+    "roles"
+  ],
+  "author": "Jay Shaffer",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "yarn": "^1.9.4"
+  }
+}
