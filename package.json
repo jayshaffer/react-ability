@@ -3,8 +3,24 @@
   "version": "1.0.0",
   "description": "React access control through roles and permissions",
   "main": "index.js",
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test jest"
   },
   "keywords": [
     "react",
@@ -16,6 +32,15 @@
   "author": "Jay Shaffer",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.4.0",
+    "jest": "^23.5.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "yarn": "^1.9.4"

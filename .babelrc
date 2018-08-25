@@ -1,0 +1,49 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "ie >= 11"
+          ]
+        },
+        "modules": false,
+        "loose": true
+      }
+    ],
+    "stage-0",
+    "react",
+    "jest"
+  ],
+  "plugins": [
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+          [
+              "env",
+              {
+                  "modules": "commonjs",
+                  "useBuiltIns": "usage",
+                  "debug": false
+              }
+          ],
+          "stage-0",
+          "react",
+          "jest"
+      ],
+    },
+    "commonjs": {
+      "presets": [
+        [
+          "env",
+          {
+            "loose": true
+          }
+        ]
+      ]
+    }
+  }
+}
