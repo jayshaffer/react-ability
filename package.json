@@ -22,7 +22,7 @@
       "node_modules",
       "src"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/config/setuptests.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/config/setupTests.js"
   },
   "scripts": {
     "test": "NODE_ENV=test jest --coverage",
