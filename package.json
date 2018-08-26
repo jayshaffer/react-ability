@@ -1,6 +1,6 @@
 {
   "name": "react-ability",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React permissions based on the BCAC spec",
   "main": "/lib/index.js",
   "jest": {
