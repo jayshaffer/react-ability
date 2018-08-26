@@ -29,31 +29,34 @@ Create a definition object.
 
 ```javascript
 const definition = {
-	rules: [
-		{
-			type: 'BLOGPOST',
-			abilities: [
-				{
-					name: 'VIEW',
-					roles: ['ADMIN', 'USER']
-				}
-			]
-		},
-		{
-			type: 'COURSE',
-			abilities: [
-				{
-					name: 'EDIT',
-					roles: ['USER']
-				}
-			]
-		}
-	]
+  rules: [
+      {
+          type: 'BLOGPOST',
+          abilities: [
+              {
+                  name: 'VIEW',
+                  roles: ['ADMIN', 'USER']
+              }
+          ]
+      },
+      {
+          type: 'COURSE',
+          abilities: [
+              {
+                  name: 'EDIT',
+                  roles: ['USER']
+              }
+          ]
+      }
+  ]
+}
 
 ```
+
 Pass that definition to an ability provider, along with any roles the
 current user has.  The roles should be dynamic and be provisioned
 through some sort of controlling authorization service API.
+
 ```javascript
     import React from 'react'
     import AbilityProvider from 'react-ability'
@@ -63,7 +66,8 @@ through some sort of controlling authorization service API.
     </AbilityProvider>
 ```
 
-Then in any children you can control how you want components to be rendered
+Then in any children you can control how you want components to be rendered.
+
 ```javascript
     import React from 'react'
     import AbilityControl from 'react-ability'
@@ -73,14 +77,19 @@ Then in any children you can control how you want components to be rendered
             <div>You can see me!</div>
         </AbilityControl> 
         <AbilityControl name="CREATE" type="BLOGPOST">
-            <div>Can't see me!</div>
+            <div>Can\'t see me!</div>
         </AbilityControl>
     </div>
     ...
 ```
 
-You can also check abilities in any child components of the AbilityProvider
+You can also check abilities in any child components of the AbilityProvider.
+
 ```javascript
     import able from 'react-ability'
     const ableToView = able('VIEW', 'BUTTON', this.props.abilities) 
 ```
+
+## License
+
+MIT
