@@ -1,8 +1,8 @@
 {
   "name": "react-ability",
   "version": "1.0.0",
-  "description": "React access control through roles and permissions",
-  "main": "index.js",
+  "description": "React permissions based on the BCAC spec",
+  "main": "/index.js",
   "jest": {
     "testPathIgnorePatterns": [
       "/lib",
