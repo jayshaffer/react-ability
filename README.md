@@ -90,6 +90,14 @@ You can also check abilities in any child components of the AbilityProvider.
     const ableToView = able('VIEW', 'BUTTON', this.props.abilities) 
 ```
 
+## Limitations
+
+This library DOES NOT replace or fill the need for a backend authorization service.
+
+The domain of react-ability is primarily visibility and role checking. This doesn't prevent your users from modifying the JS and monkeying around with front end permissions.
+
+Make sure you have a solid permission system on the backend that does the auth heavy lifting, and doesn't rely on this library for your application's primary authorization.
+
 ## License
 
 MIT
