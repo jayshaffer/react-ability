@@ -1,8 +1,8 @@
 {
   "name": "react-ability",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React permissions based on the BCAC spec",
-  "main": "/lib/index.js",
+  "main": "index.js",
   "jest": {
     "testPathIgnorePatterns": [
       "/lib",
@@ -71,5 +71,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jayshaffer/react-ability"
+  },
+  "dependencies": {
+    "react-ability": "^1.0.5"
   }
 }

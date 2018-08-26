@@ -3811,6 +3811,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-ability@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-ability/-/react-ability-1.0.5.tgz#6106764f58863416629bd45cfb9b46c36e6160c9"
+
 react-dom@^16.4.2:
   version "16.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.2.tgz#4afed569689f2c561d2b8da0b819669c38a0bda4"
