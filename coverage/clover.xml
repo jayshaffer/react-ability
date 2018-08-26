@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1535297052042" clover="3.2.0">
+  <project timestamp="1535297052042" name="All files">
+    <metrics statements="29" coveredstatements="29" conditionals="6" coveredconditionals="6" methods="9" coveredmethods="9" elements="44" coveredelements="44" complexity="0" loc="29" ncloc="29" packages="2" files="6" classes="6">
+      <package name="config">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="setupTests.js" path="/Users/jayshaffer/dev/react-ability/config/setupTests.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="5" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="src">
+        <metrics statements="28" coveredstatements="28" conditionals="6" coveredconditionals="6" methods="9" coveredmethods="9"/>
+        <file name="AbilityCollection.js" path="/Users/jayshaffer/dev/react-ability/src/AbilityCollection.js">
+          <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+          <line num="10" count="4" type="stmt"/>
+          <line num="11" count="4" type="stmt"/>
+          <line num="12" count="4" type="stmt"/>
+          <line num="13" count="4" type="stmt"/>
+          <line num="14" count="4" type="stmt"/>
+          <line num="15" count="4" type="stmt"/>
+          <line num="19" count="4" type="stmt"/>
+          <line num="20" count="4" type="stmt"/>
+          <line num="25" count="4" type="stmt"/>
+          <line num="29" count="4" type="stmt"/>
+          <line num="30" count="5" type="stmt"/>
+          <line num="31" count="5" type="stmt"/>
+          <line num="32" count="5" type="stmt"/>
+          <line num="33" count="5" type="stmt"/>
+          <line num="34" count="5" type="stmt"/>
+          <line num="35" count="5" type="stmt"/>
+          <line num="36" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="37" count="4" type="stmt"/>
+          <line num="38" count="4" type="stmt"/>
+        </file>
+        <file name="AbilityContext.js" path="/Users/jayshaffer/dev/react-ability/src/AbilityContext.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="5" count="2" type="stmt"/>
+        </file>
+        <file name="AbilityControl.js" path="/Users/jayshaffer/dev/react-ability/src/AbilityControl.js">
+          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+          <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="32" count="2" type="stmt"/>
+          <line num="35" count="2" type="stmt"/>
+        </file>
+        <file name="AbilityProvider.js" path="/Users/jayshaffer/dev/react-ability/src/AbilityProvider.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="20" count="3" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+        </file>
+        <file name="able.js" path="/Users/jayshaffer/dev/react-ability/src/able.js">
+          <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

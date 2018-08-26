@@ -9,18 +9,18 @@ import able from './able'
 type Props = {
   children?: Node,
   type: string,
-  permission: string,
+  name: string,
   abilities: Array<string>
 }
 
 class AbilityControl extends Component<Props>{
-  permission: string 
+  name: string 
   children: Node
   abilities: Array<String>
   type: string
 
   renderChildren(abilities: any){
-  	if(able(abilities, this.props.permission, this.props.type)){
+  	if(able(this.props.name, this.props.type, abilities)){
   		return Children.only(this.props.children)
   	}
   	else{

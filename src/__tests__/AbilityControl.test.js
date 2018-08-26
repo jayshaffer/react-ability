@@ -21,7 +21,7 @@ describe('render', () => {
 	test('should not render a controlled component without permissions', () => {
 		let element = mount(
 			<AbilityProvider roles={['ADMIN']} definition={definition}>
-				<AbilityControl permission={'EAT'} type="BUTTON">
+				<AbilityControl name={'EAT'} type="BUTTON">
 					<div className="notfind"></div>
 				</AbilityControl> 
 			</AbilityProvider>
@@ -34,7 +34,7 @@ describe('render', () => {
 	test('should render a controlled component with permissions', () => {
 		let element = mount(
 			<AbilityProvider roles={['ADMIN']} definition={definition}>
-				<AbilityControl permission={'VIEW'} type="BUTTON">
+				<AbilityControl name={'VIEW'} type="BUTTON">
 					<div className="notfind"></div>
 				</AbilityControl> 
 			</AbilityProvider>
