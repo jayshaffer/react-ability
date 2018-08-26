@@ -1,8 +1,8 @@
 {
   "name": "react-ability",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React permissions based on the BCAC spec",
-  "main": "/index.js",
+  "main": "/lib/index.js",
   "jest": {
     "testPathIgnorePatterns": [
       "/lib",
@@ -38,7 +38,7 @@
   ],
   "author": "Jay Shaffer",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
@@ -54,9 +54,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "yarn": "^1.9.4"
-  },
-  "devDependencies": {
+    "yarn": "^1.9.4",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
     "babel-preset-flow": "^6.23.0",
