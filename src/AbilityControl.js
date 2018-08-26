@@ -1,13 +1,27 @@
+// @flow
+
+import type { Node } from "react"
 import { Component, PropTypes, Children } from "react"
-import PropTypes from "prop-types"
-import { Consumer } from './AbilityContext'
-import { able } from 'able'
+import context from './AbilityContext'
+import React from 'react'
+import able from './able'
 
-class AbilityControl extends React.Component{
+type Props = {
+  children?: Node,
+  type: string,
+  permission: string,
+  abilities: Array<string>
+}
 
-  renderChildren(abilityContext){
-    if(able(this.props.ability, this.props.namespace)){
-      {Children.only(this.props.children)}
+class AbilityControl extends Component<Props>{
+  permission: string 
+  children: Node
+  abilities: Array<String>
+  type: string
+
+  renderChildren(abilities: any){
+    if(able(abilities, this.props.permission, this.props.type)){
+      return Children.only(this.props.children)
     }
     else{
       return null
@@ -16,24 +30,13 @@ class AbilityControl extends React.Component{
 
   render(){
     return (
-      <Consumer>
-        {abilityContext => (
-            return this.renderChildren(abilityContext)
-        )}
-      }
-      </Consumer>
+      <context.Consumer>
+          {(abilitiesContext) => (
+              this.renderChildren(abilitiesContext)
+          )}
+      </context.Consumer>
     )
   }
-}
-
-AbilityControl.defaultProps = {
-  children: []
-}
-
-AbilityControl.propTypes = {
-  children: PropTypes.node,
-  namespace: PropTypes.string,
-  ability: PropTypes.string.isRequired
 }
 
 export default AbilityControl

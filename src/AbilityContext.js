@@ -1,3 +1,7 @@
+// @flow
+
 import React from 'react'
 
-export default React.createContext({})
+const context = React.createContext({})
+
+export default context 

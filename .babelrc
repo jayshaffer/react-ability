@@ -14,7 +14,7 @@
     ],
     "stage-0",
     "react",
-    "jest"
+    "flow"
   ],
   "plugins": [
     "transform-object-rest-spread"
@@ -32,6 +32,7 @@
           ],
           "stage-0",
           "react",
+          "flow",
           "jest"
       ],
     },

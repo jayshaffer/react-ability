@@ -1,37 +1,29 @@
+// @flow
+
 import { Component, PropTypes, Children } from "react"
-import PropTypes from "prop-types"
-import { Provider } from './AbilityContext'
+import context from './AbilityContext'
+import AbilityCollection from './AbilityCollection'
+import type { Node } from 'react'
+import React from 'react'
 
-class AbilityProvider extends React.Component(){
+type Props = {
+  roles: Array<string>,
+  definition: any,
+  children?: Node
+}
 
-    collectRoles(){
-      for(var i = 0; i < this.components.length; i++){
-        const component = this.components[i];
-        for(var key in this.components[i]){
-          component[key]
-        }
-      }
-    }
+class AbilityProvider extends Component<Props>{
+
+    roles: Array<string>
 
     render() {
-        return (
-          <Provider value={{abilities: this.props.abilities, role: this.props.role}}>
-            {Children.only(this.props.children)}
-          </Provider>
-        )
+      const abilityCollection = new AbilityCollection(this.props.definition, this.props.roles)
+      return (
+        <context.Provider value={abilityCollection.abilities}>
+          {Children.only(this.props.children)}
+        </context.Provider>
+      )
     }
-}
-
-Ability.defaultProps = {
-  children: [],
-  abilities: {}
-}
-
-AbilityProvider.propTypes = {
-  children: PropTypes.node,
-  role: PropTyoes.string,
-  abilities: PropTypes.object.isRequired,
-  config: PropTypes.object.isRequired
 }
 
 export default AbilityProvider
