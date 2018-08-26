@@ -77,7 +77,7 @@ Then in any children you can control how you want components to be rendered.
             <div>"You can see me!"</div>
         </AbilityControl> 
         <AbilityControl name="CREATE" type="BLOGPOST">
-            <div>"Can\'t see me!"</div>
+            <div>"Can't see me!"</div>
         </AbilityControl>
     </div>
     ...

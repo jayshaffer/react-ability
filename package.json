@@ -1,6 +1,6 @@
 {
   "name": "react-ability",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React permissions based on the BCAC spec",
   "main": "/lib/index.js",
   "jest": {
@@ -37,7 +37,7 @@
     "roles"
   ],
   "author": "Jay Shaffer",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
