@@ -1,6 +1,6 @@
 {
   "name": "react-ability",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React permissions based on the BCAC spec",
   "main": "/lib/index.js",
   "jest": {
@@ -25,8 +25,9 @@
     "setupTestFrameworkScriptFile": "<rootDir>/config/setupTests.js"
   },
   "scripts": {
+    "clean": "rimraf lib",
     "test": "NODE_ENV=test jest --coverage",
-    "build": "babel src/ -d lib/",
+    "build": "npm run clean && babel src/ -d lib/",
     "prepublish": "yarn run build"
   },
   "keywords": [
@@ -59,9 +60,10 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "rimraf": "^2.6.2",
     "yarn": "^1.9.4"
   },
-  "files": [ 
+  "files": [
     "README.md",
     "index.js",
     "lib/"
@@ -69,8 +71,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jayshaffer/react-ability"
-  },
-  "dependencies": {
-    "react-ability": "^1.0.3"
   }
 }
