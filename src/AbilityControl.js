@@ -1,7 +1,7 @@
 // @flow
 
-import type { Node } from "react"
-import { Component, PropTypes, Children } from "react"
+import type { Node } from 'react'
+import { Component, PropTypes, Children } from 'react'
 import context from './AbilityContext'
 import React from 'react'
 import able from './able'
@@ -20,22 +20,22 @@ class AbilityControl extends Component<Props>{
   type: string
 
   renderChildren(abilities: any){
-    if(able(abilities, this.props.permission, this.props.type)){
-      return Children.only(this.props.children)
-    }
-    else{
-      return null
-    }
+  	if(able(abilities, this.props.permission, this.props.type)){
+  		return Children.only(this.props.children)
+  	}
+  	else{
+  		return null
+  	}
   }
 
   render(){
-    return (
-      <context.Consumer>
-          {(abilitiesContext) => (
-              this.renderChildren(abilitiesContext)
-          )}
-      </context.Consumer>
-    )
+  	return (
+  		<context.Consumer>
+  			{(abilitiesContext) => (
+  				this.renderChildren(abilitiesContext)
+  			)}
+  		</context.Consumer>
+  	)
   }
 }
 

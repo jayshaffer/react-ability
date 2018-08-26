@@ -1,6 +1,6 @@
 // @flow
 
-import { Component, PropTypes, Children } from "react"
+import { Component, Children } from 'react'
 import context from './AbilityContext'
 import AbilityCollection from './AbilityCollection'
 import type { Node } from 'react'
@@ -17,12 +17,12 @@ class AbilityProvider extends Component<Props>{
     roles: Array<string>
 
     render() {
-      const abilityCollection = new AbilityCollection(this.props.definition, this.props.roles)
-      return (
-        <context.Provider value={abilityCollection.abilities}>
-          {Children.only(this.props.children)}
-        </context.Provider>
-      )
+    	const abilityCollection = new AbilityCollection(this.props.definition, this.props.roles)
+    	return (
+    		<context.Provider value={abilityCollection.abilities}>
+    			{Children.only(this.props.children)}
+    		</context.Provider>
+    	)
     }
 }
 
