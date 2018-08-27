@@ -1,6 +1,6 @@
 {
   "name": "react-ability",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Role based permissions for React",
   "main": "./lib/index.js",
   "jest": {
