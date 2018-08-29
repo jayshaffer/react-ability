@@ -66,7 +66,7 @@ Then in any children you can control how you want components to be rendered.
         <AbilityControl permission="VIEW_BLOGPOST">
             <div>"You can see me!"</div>
         </AbilityControl> 
-        <AbilityControl name="CREATE_BLOGPOST">
+        <AbilityControl permission="CREATE_BLOGPOST">
             <div>"Can't see me!"</div>
         </AbilityControl>
     </AbilityProvider>
