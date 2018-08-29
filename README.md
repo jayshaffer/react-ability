@@ -29,25 +29,15 @@ Create a definition object.
 
 ```javascript
 const definition = {
-  rules: [
-      {
-          type: 'BLOGPOST',
-          abilities: [
-              {
-                  name: 'VIEW',
-                  roles: ['ADMIN', 'USER']
-              }
-          ]
-      },
-      {
-          type: 'COURSE',
-          abilities: [
-              {
-                  name: 'EDIT',
-                  roles: ['USER']
-              }
-          ]
-      }
+  permissions: [
+    {
+        name: 'VIEW_BUTTON',
+        roles: ['ADMIN', 'USER']
+    }
+    {
+        name: 'EDIT_COURSE',
+        roles: ['USER']
+    }
   ]
 }
 
@@ -72,22 +62,22 @@ Then in any children you can control how you want components to be rendered.
     import React from 'react'
     import AbilityControl from 'react-ability'
     ...
-    <div>
-        <AbilityControl name="VIEW" type="BLOGPOST">
+    <AbilityProvider roles={roles} definition={definition}>
+        <AbilityControl permission="VIEW_BLOGPOST">
             <div>"You can see me!"</div>
         </AbilityControl> 
-        <AbilityControl name="CREATE" type="BLOGPOST">
+        <AbilityControl name="CREATE_BLOGPOST">
             <div>"Can't see me!"</div>
         </AbilityControl>
-    </div>
+    </AbilityProvider>
     ...
 ```
 
 You can also check abilities in any child components of the AbilityProvider.
 
 ```javascript
-    import able from 'react-ability'
-    const ableToView = able('VIEW', 'BUTTON', this.props.abilities) 
+    import ableTo from 'react-ability'
+    const ableToView = ableTo('VIEW_BLOGPOST', this.props.abilities) 
 ```
 
 ## Limitations
@@ -96,8 +86,7 @@ This library DOES NOT replace or fill the need for a backend authorization servi
 
 The domain of react-ability is primarily visibility and role checking. This doesn't prevent your users from modifying the JS and monkeying around with front end permissions.
 
-Make sure you have a solid permission system on the backend that does the auth heavy lifting, and doesn't rely on this library for your application's primary authorization.
-
+Make sure you have a solid permission system on the backend that does the auth heavy lifting, and doesn't rely on this library for your application's primary authorization. 
 ## License
 
 MIT

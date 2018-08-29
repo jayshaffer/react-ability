@@ -1,24 +1,14 @@
 import AbilityCollection from '../AbilityCollection' 
 
 const definition = {
-	rules: [
+	permissions: [
 		{
-			type: 'BUTTON',
-			abilities: [
-				{
-					name: 'VIEW',
-					roles: ['ADMIN', 'USER']
-				}
-			]
+			name: 'VIEW_BUTTON',
+			roles: ['ADMIN', 'USER']
 		},
 		{
-			type: 'COURSE',
-			abilities: [
-				{
-					name: 'EDIT',
-					roles: ['USER']
-				}
-			]
+			name: 'EDIT_BUTTON',
+			roles: ['USER']
 		}
 	]
 }

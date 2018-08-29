@@ -4,15 +4,10 @@ import AbilityControl from '../AbilityControl'
 import React from 'react'
 
 const definition = {
-	rules: [
+	permissions: [
 		{
-			type: 'BUTTON',
-			abilities: [
-				{
-					name: 'VIEW',
-					roles: ['ADMIN', 'USER']
-				}
-			]
+			name: 'VIEW_BUTTON',
+			roles: ['ADMIN', 'USER']
 		}
 	]
 }
@@ -21,7 +16,7 @@ describe('render', () => {
 	test('should not render a controlled component without permissions', () => {
 		let element = mount(
 			<AbilityProvider roles={['ADMIN']} definition={definition}>
-				<AbilityControl name={'EAT'} type="BUTTON">
+				<AbilityControl permission={'EAT'}>
 					<div className="notfind"></div>
 				</AbilityControl> 
 			</AbilityProvider>
@@ -34,7 +29,7 @@ describe('render', () => {
 	test('should render a controlled component with permissions', () => {
 		let element = mount(
 			<AbilityProvider roles={['ADMIN']} definition={definition}>
-				<AbilityControl name={'VIEW'} type="BUTTON">
+				<AbilityControl permission={'VIEW_BUTTON'}>
 					<div className="notfind"></div>
 				</AbilityControl> 
 			</AbilityProvider>

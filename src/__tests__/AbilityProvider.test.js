@@ -3,15 +3,10 @@ import AbilityProvider from '../AbilityProvider'
 import React from 'react'
 
 const definition = {
-	rules: [
+	permissions: [
 		{
-			type: 'BUTTON',
-			abilities: [
-				{
-					name: 'VIEW',
-					roles: ['ADMIN', 'USER']
-				}
-			]
+			name: 'VIEW_BUTTON',
+			roles: ['ADMIN', 'USER']
 		}
 	]
 }
@@ -23,6 +18,6 @@ describe('render', () => {
 				<div></div>
 			</AbilityProvider>
 		)
-		expect(element.props().value['BUTTON_VIEW']).toBe(true)
+		expect(element.props().value['VIEW_BUTTON']).toBe(true)
 	})
 })

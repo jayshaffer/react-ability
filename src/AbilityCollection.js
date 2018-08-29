@@ -21,24 +21,20 @@ export default class AbilityCollection {
   	}
   }
 
-  appendAbility(type: string, name: string){
-  	this.abilities[`${type}_${name}`] = true 
+  appendAbility(permission: string){
+  	this.abilities[permission] = true 
   }
     
   collect(){
-  	for(var i = 0; i < this.definition.rules.length; i++){
-  		let rule = this.definition.rules[i]
-  		let abilities = rule.abilities
-  		for(var j = 0; j < abilities.length; j++){
-  			let ability = abilities[j]
-  			let roles = ability.roles
-  			for(var k = 0; k < roles.length; k++){
-  				if(this.roleHash[roles[k]]){
-  					this.appendAbility(rule.type, ability.name)
-  					break
-  				}
-  			}
-  		}
+  	for(var i = 0; i < this.definition.permissions.length; i++){
+  		let permission = this.definition.permissions[i]
+		let roles = permission.roles
+		for(var k = 0; k < roles.length; k++){
+			if(this.roleHash[roles[k]]){
+				this.appendAbility(permission.name)
+				break
+			}
+		}
   	}
   }
 }
