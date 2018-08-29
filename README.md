@@ -33,7 +33,7 @@ const definition = {
     {
         name: 'VIEW_BUTTON',
         roles: ['ADMIN', 'USER']
-    }
+    },
     {
         name: 'EDIT_COURSE',
         roles: ['USER']
