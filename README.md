@@ -31,7 +31,7 @@ Create a definition object.
 const definition = {
   permissions: [
     {
-        name: 'VIEW_BUTTON',
+        name: 'VIEW_BLOGPOST',
         roles: ['ADMIN', 'USER']
     },
     {
